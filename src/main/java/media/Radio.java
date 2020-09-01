@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package media;
 
 /**
@@ -13,6 +8,16 @@ public class Radio {
     private double fmFrequency;
     private int amFrequency;
     private char band;
+    
+    public Radio() {
+        
+    }
+
+    public Radio(double fmFrequency, int amFrequency, char band) {
+        this.fmFrequency = fmFrequency;
+        this.amFrequency = amFrequency;
+        this.band = band;
+    }
 
     public double getFmFrequency() {
         return fmFrequency;
@@ -38,5 +43,17 @@ public class Radio {
         this.band = band;
     }
     
+    public void info() {
+        System.out.println("FM: " + getFmFrequency());
+        System.out.println("AM: " + getAmFrequency());
+        System.out.println("Band: " + getBand());
+    }
+    
+    public void printAttributes() {
+            System.out.println("FM frekvencija je: " + fmFrequency);
+            System.out.println("AM frekvencija je: " + amFrequency);
+            System.out.println("Band je: " + band);
+    
+       }
+     
 }
-
